@@ -87,6 +87,9 @@
     <FlyoutItem Title="Grid Layout 2" Icon="icon_about.png">
         <ShellContent Route="GridLayout2Page" ContentTemplate="{DataTemplate local:GridLayout2Page}" />
     </FlyoutItem>
+    <FlyoutItem Title="Basic Controls" Icon="icon_about.png">
+        <ShellContent Route="BasicControlsPage" ContentTemplate="{DataTemplate local:BasicControlsPage}" />
+    </FlyoutItem>
     <FlyoutItem Title="Browse" Icon="icon_feed.png">
         <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
     </FlyoutItem>

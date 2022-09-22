@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\BasicControlsPage.xaml.cs">
+      <DependentUpon>BasicControlsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\GridLayout2Page.xaml.cs">
       <DependentUpon>GridLayout2Page.xaml</DependentUpon>
     </Compile>
