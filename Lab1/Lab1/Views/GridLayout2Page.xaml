@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1.Views.GridLayout2Page"
+             xmlns:vm="clr-namespace:Lab1.ViewModels"
+             Title="{Binding Title}"
+             Visual="Material">
+
+    <ContentPage.BindingContext>
+        <vm:GridLayout2ViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="100"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="100"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+            <Label Text="Autosized cell" FontSize="Large"
+            TextColor="White" BackgroundColor="Blue"
+                   Grid.Row="0" Grid.Column="0"></Label>
+
+                <BoxView BackgroundColor="Silver"
+                Grid.Row="0" Grid.Column="1"></BoxView>
+                <BoxView BackgroundColor="Teal"
+                Grid.Row="1" Grid.Column="0"></BoxView>
+
+                <Label Text="Leftover space" FontSize="32"
+                    TextColor="Blue" BackgroundColor="Aqua"
+                    Grid.Row="1" Grid.Column="1" 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"></Label>
+
+                <Label Text="Span two rows (or more if you want)"
+                    TextColor="Yellow" BackgroundColor="Blue"
+                    Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"></Label>
+
+                <Label Text="Span two colums" FontSize="Large"
+                    TextColor="Blue" BackgroundColor="Yellow"
+                    Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"></Label>
+
+                <Label Text="Fixed 100x100"
+                    TextColor="Aqua" BackgroundColor="Red"
+                    Grid.Row="2" Grid.Column="2" 
+                    HorizontalTextAlignment="Center"
+                    VerticalTextAlignment="Center"></Label>
+                
+            </Grid>
+    </ContentPage.Content>
+</ContentPage>
