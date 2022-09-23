@@ -1,5 +1,4 @@
-﻿using Lab1.Services;
-using Lab1.Views;
+﻿using Lab1.Views;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,7 +12,6 @@ namespace Lab1
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

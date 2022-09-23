@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Lab1.Views.AboutPage"
+             x:Class="Lab1.Views.StackLayoutPage"
              xmlns:vm="clr-namespace:Lab1.ViewModels"
              Title="{Binding Title}"
              Visual="Material">
     
     <ContentPage.BindingContext>
-        <vm:AboutViewModel />
+        <vm:StackLayoutViewModel />
     </ContentPage.BindingContext>
     
     <ContentPage.Resources>

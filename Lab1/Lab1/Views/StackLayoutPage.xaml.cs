@@ -5,9 +5,9 @@ using Xamarin.Forms.Xaml;
 
 namespace Lab1.Views
 {
-    public partial class AboutPage : ContentPage
+    public partial class StackLayoutPage : ContentPage
     {
-        public AboutPage()
+        public StackLayoutPage()
         {
             InitializeComponent();
         }

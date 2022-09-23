@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab1.Views.HandlingTheControlsPage"
+             xmlns:vm="clr-namespace:Lab1.ViewModels"
+             Title="{Binding Title}"
+             Visual="Material">
+    
+    <ContentPage.BindingContext>
+        <vm:HandlingTheControlsViewModel />
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="Accent">#96d1ff</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Margin="10">
+        <Label Text="Personal Information" FontSize="35"
+        TextColor="Red" FontAttributes="Bold"
+               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"></Label>
+
+        <Label Text="Name" Grid.Row="1" Grid.Column="0" FontSize="20"
+               VerticalTextAlignment="Center"></Label>
+        <Entry Placeholder="Enter your name" Keyboard="Text"
+               Grid.Row="1" Grid.Column="1" FontSize="20"
+               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrName}"></Entry>
+        
+        <Label Text="Email" Grid.Row="2" Grid.Column="0" FontSize="20"
+               VerticalTextAlignment="Center"></Label>
+        <Entry Placeholder="Enter your email" Keyboard="Email"
+               Grid.Row="2" Grid.Column="1" FontSize="20"
+               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrEmail}"></Entry>
+
+        <Label Text="Phone" Grid.Row="3" Grid.Column="0" FontSize="20"
+               VerticalTextAlignment="Center"></Label>
+        <Entry Placeholder="Enter your phone" Keyboard="Telephone"
+               Grid.Row="3" Grid.Column="1" FontSize="20"
+               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrPhone}"></Entry>
+
+        <Label Text="Birthday:" Grid.Row="4" Grid.Column="0" FontSize="20"
+               VerticalTextAlignment="Center"></Label>
+        <DatePicker Format="dd/MM/yyyy" Date="{Binding DpkUsrDOB}" FontSize="20"
+                 Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></DatePicker>
+
+        <Label Text="Male?" Grid.Row="5" Grid.Column="0" FontSize="20"
+               VerticalTextAlignment="Center"></Label>
+        <Switch IsToggled="{Binding SwUsrGender}" HorizontalOptions="Start"
+                Grid.Row="5" Grid.Column="1"
+                ThumbColor="#96d1ff" OnColor="LightSkyBlue"></Switch>
+
+        <Button Text="Submit" Grid.Row="6" Grid.Column="0" 
+                HorizontalOptions="End" VerticalOptions="Center"
+                Command="{Binding SubmitBtn}">
+        </Button>
+        <Button Text="Cancel" Grid.Row="6" Grid.Column="1" 
+                HorizontalOptions="Start" VerticalOptions="Center"
+                Command="{Binding CancelBtn}">
+        </Button>
+    </Grid>
+</ContentPage>

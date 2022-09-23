@@ -16,49 +16,33 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid Margin="10">
-        <Label Text="Personal Information" FontSize="35"
-        TextColor="Red" FontAttributes="Bold"
-               Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+    <StackLayout Orientation="Vertical" Margin="10">
+        
+
+    <Grid VerticalOptions="Start">
+        <Label Text="Basic Controls" FontSize="45"
+        TextColor="Gray" FontAttributes="Bold"
                HorizontalTextAlignment="Center"
                VerticalTextAlignment="Center"></Label>
 
-        <Label Text="Name" Grid.Row="1" Grid.Column="0" FontSize="20"
-               VerticalTextAlignment="Center"></Label>
-        <Entry Placeholder="Enter your name" Keyboard="Text"
-               Grid.Row="1" Grid.Column="1" FontSize="20"
-               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrName}"></Entry>
+        <Entry Placeholder="Name" Keyboard="Text"
+               Grid.Row="1" FontSize="20"
+               VerticalOptions="CenterAndExpand"></Entry>
         
-        <Label Text="Email" Grid.Row="2" Grid.Column="0" FontSize="20"
-               VerticalTextAlignment="Center"></Label>
-        <Entry Placeholder="Enter your email" Keyboard="Email"
-               Grid.Row="2" Grid.Column="1" FontSize="20"
-               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrEmail}"></Entry>
+        <Entry Placeholder="Email" Keyboard="Email"
+               Grid.Row="2" FontSize="20"
+               VerticalOptions="CenterAndExpand" ></Entry>
 
-        <Label Text="Phone" Grid.Row="3" Grid.Column="0" FontSize="20"
-               VerticalTextAlignment="Center"></Label>
-        <Entry Placeholder="Enter your phone" Keyboard="Telephone"
-               Grid.Row="3" Grid.Column="1" FontSize="20"
-               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrPhone}"></Entry>
+        <Entry Placeholder="Phone Number" Keyboard="Telephone"
+               Grid.Row="3" FontSize="20"
+               VerticalOptions="CenterAndExpand"></Entry>
 
-        <Label Text="Birthday:" Grid.Row="4" Grid.Column="0" FontSize="20"
-               VerticalTextAlignment="Center"></Label>
-        <DatePicker Format="dd/MM/yyyy" Date="{Binding DpkUsrDOB}" FontSize="20"
-                 Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></DatePicker>
-
-        <Label Text="Male?" Grid.Row="5" Grid.Column="0" FontSize="20"
-               VerticalTextAlignment="Center"></Label>
-        <Switch IsToggled="{Binding SwUsrGender}" HorizontalOptions="Start"
-                Grid.Row="5" Grid.Column="1"
-                ThumbColor="#96d1ff" OnColor="LightSkyBlue"></Switch>
-
-        <Button Text="Submit" Grid.Row="6" Grid.Column="0" 
-                HorizontalOptions="End" VerticalOptions="Center"
-                Command="{Binding SubmitBtn}">
-        </Button>
-        <Button Text="Cancel" Grid.Row="6" Grid.Column="1" 
-                HorizontalOptions="Start" VerticalOptions="Center"
-                Command="{Binding CancelBtn}">
-        </Button>
+        <Entry Placeholder="Password" IsPassword="True"
+               Grid.Row="4" FontSize="20"
+               VerticalOptions="CenterAndExpand"></Entry>
     </Grid>
+       <Editor  VerticalOptions="FillAndExpand"
+                ></Editor>
+    </StackLayout>
+
 </ContentPage>
