@@ -27,38 +27,38 @@
                VerticalTextAlignment="Center"></Label>
         <Entry Placeholder="Enter your name" Keyboard="Text"
                Grid.Row="1" Grid.Column="1" FontSize="20"
-               VerticalOptions="CenterAndExpand" x:Name="entUsrName"></Entry>
+               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrName}"></Entry>
         
         <Label Text="Email" Grid.Row="2" Grid.Column="0" FontSize="20"
                VerticalTextAlignment="Center"></Label>
         <Entry Placeholder="Enter your email" Keyboard="Email"
                Grid.Row="2" Grid.Column="1" FontSize="20"
-               VerticalOptions="CenterAndExpand" x:Name="entUsrEmail"></Entry>
+               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrEmail}"></Entry>
 
         <Label Text="Phone" Grid.Row="3" Grid.Column="0" FontSize="20"
                VerticalTextAlignment="Center"></Label>
         <Entry Placeholder="Enter your phone" Keyboard="Telephone"
                Grid.Row="3" Grid.Column="1" FontSize="20"
-               VerticalOptions="CenterAndExpand" x:Name="entUsrPhone"></Entry>
+               VerticalOptions="CenterAndExpand" Text="{Binding EntUsrPhone}"></Entry>
 
         <Label Text="Birthday:" Grid.Row="4" Grid.Column="0" FontSize="20"
                VerticalTextAlignment="Center"></Label>
-        <DatePicker Format="dd/MM/yyyy" x:Name="dpkUsrDOB" FontSize="20"
+        <DatePicker Format="dd/MM/yyyy" Date="{Binding DpkUsrDOB}" FontSize="20"
                  Grid.Row="4" Grid.Column="1" VerticalOptions="Center"></DatePicker>
 
         <Label Text="Male?" Grid.Row="5" Grid.Column="0" FontSize="20"
                VerticalTextAlignment="Center"></Label>
         <Switch IsToggled="False" HorizontalOptions="Start"
-               Grid.Row="5" Grid.Column="1" 
+               Grid.Row="5" Grid.Column="1"
                x:Name="swUsrGender" ThumbColor="#96d1ff" OnColor="LightSkyBlue"></Switch>
 
         <Button Text="Submit" Grid.Row="6" Grid.Column="0" 
-               HorizontalOptions="End" VerticalOptions="Center"
-                x:Name="SubmitBtn" Command="{Binding SubmitCommand}">
+                HorizontalOptions="End" VerticalOptions="Center"
+                Command="{Binding SubmitCommand}">
         </Button>
         <Button Text="Cancel" Grid.Row="6" Grid.Column="1" 
-               HorizontalOptions="Start" VerticalOptions="Center"
-                x:Name="CancelBtn" Command="{Binding CancelCommand}">
+                HorizontalOptions="Start" VerticalOptions="Center"
+                Command="{Binding CancelCommand}">
         </Button>
     </Grid>
 </ContentPage>
