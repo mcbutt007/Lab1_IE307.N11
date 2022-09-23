@@ -48,17 +48,17 @@
 
         <Label Text="Male?" Grid.Row="5" Grid.Column="0" FontSize="20"
                VerticalTextAlignment="Center"></Label>
-        <Switch IsToggled="False" HorizontalOptions="Start"
-               Grid.Row="5" Grid.Column="1"
-               x:Name="swUsrGender" ThumbColor="#96d1ff" OnColor="LightSkyBlue"></Switch>
+        <Switch IsToggled="{Binding SwUsrGender}" HorizontalOptions="Start"
+                Grid.Row="5" Grid.Column="1"
+                ThumbColor="#96d1ff" OnColor="LightSkyBlue"></Switch>
 
         <Button Text="Submit" Grid.Row="6" Grid.Column="0" 
                 HorizontalOptions="End" VerticalOptions="Center"
-                Command="{Binding SubmitCommand}">
+                Command="{Binding SubmitBtn}">
         </Button>
         <Button Text="Cancel" Grid.Row="6" Grid.Column="1" 
                 HorizontalOptions="Start" VerticalOptions="Center"
-                Command="{Binding CancelCommand}">
+                Command="{Binding CancelBtn}">
         </Button>
     </Grid>
 </ContentPage>
